@@ -1,0 +1,962 @@
+[
+ {
+  "id": 0,
+  "label": "hood",
+  "curves": 7,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   700.0,
+   300.0,
+   0.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   235.1,
+   -61.1,
+   -127.8,
+   259.9,
+   306.0,
+   142.7,
+   6180.4,
+   2436.1,
+   1080.4
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 143.6,
+  "distance_mm": 21685,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "program": "Auto_00_hood",
+  "tcp_to_path_mm": 136.8
+ },
+ {
+  "id": 1,
+  "label": "roof",
+  "curves": 1,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   700.0,
+   0.0,
+   0.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   270.9,
+   -48.2,
+   -127.8,
+   259.9,
+   285.3,
+   180.7,
+   3951.0,
+   3143.2,
+   244.2
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 105.8,
+  "distance_mm": 16150,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "program": "Auto_01_roof",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 2,
+  "label": "trunk",
+  "curves": 5,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   1300.0,
+   300.0,
+   0.0
+  ],
+  "reachable_samples": "7/12",
+  "start_q": [
+   24.7,
+   -135.7,
+   -32.2,
+   198.5,
+   292.0,
+   168.9,
+   16.3,
+   2418.1,
+   807.5
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 96.0,
+  "distance_mm": 14826,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "retry_base_distance": 1300.0,
+  "retry": "arm base 1300 mm from the gun",
+  "program": "Auto_02_trunk",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 3,
+  "label": "front",
+  "curves": 8,
+  "status": "PARTIAL 1/2",
+  "pass": 1,
+  "offset_L_a_b": [
+   900.0,
+   0.0,
+   300.0
+  ],
+  "reachable_samples": "9/12",
+  "start_q": [
+   93.2,
+   -84.7,
+   -28.8,
+   166.3,
+   216.6,
+   240.4,
+   6538.8,
+   1747.7,
+   1614.6
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": -2.0,
+    "valid_ratio": -1.0,
+    "message": "the path could not be attached (status -2.0)"
+   }
+  ],
+  "attach_status": -2.0,
+  "valid_ratio": -1.0,
+  "time_s": 0.0,
+  "distance_mm": 0,
+  "message": "the path could not be attached (status -2.0)",
+  "retry_base_distance": null,
+  "retry": "the pose of an earlier good zone as the IK seed",
+  "uncovered_path_mm": 2045
+ },
+ {
+  "id": 3,
+  "label": "front_centre_front_1",
+  "curves": 6,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   1100.0,
+   -300.0,
+   300.0
+  ],
+  "reachable_samples": "9/12",
+  "start_q": [
+   35.0,
+   -13.4,
+   -5.8,
+   6.9,
+   67.9,
+   165.0,
+   6344.6,
+   4227.1,
+   1295.2
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 69.7,
+  "distance_mm": 10582,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "retry_base_distance": 1100.0,
+  "retry": "arm base 1100 mm from the gun",
+  "program": "Auto_03_front_centre_front_1",
+  "tcp_to_path_mm": 134.3
+ },
+ {
+  "id": 3,
+  "label": "front_centre_top_5",
+  "curves": 2,
+  "status": "FAILED",
+  "pass": 1,
+  "offset_L_a_b": [
+   900.0,
+   0.0,
+   0.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   22.7,
+   -36.9,
+   -0.0,
+   155.0,
+   241.5,
+   156.7,
+   6246.2,
+   1650.9,
+   1494.1
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": -2.0,
+    "valid_ratio": -1.0,
+    "message": "the path could not be attached (status -2.0)"
+   }
+  ],
+  "collision": {
+   "instruction": 6,
+   "pairs": [
+    "UR10[3] <-> UR10[6]",
+    "UR10[3] <-> Paint gun[0]"
+   ],
+   "joints": [
+    64.1,
+    -46.3,
+    97.8,
+    77.7,
+    218.2,
+    261.0,
+    6376.1,
+    2557.2,
+    1660.6
+   ]
+  },
+  "attach_status": -2.0,
+  "valid_ratio": -1.0,
+  "time_s": 0.0,
+  "distance_mm": 0,
+  "message": "the path could not be attached (status -2.0)",
+  "retry_base_distance": null,
+  "retry": "the template pose as the IK seed"
+ },
+ {
+  "id": 4,
+  "label": "rear",
+  "curves": 5,
+  "status": "OK (split)",
+  "pass": 1,
+  "offset_L_a_b": [
+   1100.0,
+   -300.0,
+   0.0
+  ],
+  "reachable_samples": "7/12",
+  "start_q": [
+   -21.5,
+   -119.3,
+   -77.4,
+   221.5,
+   261.1,
+   189.0,
+   164.8,
+   2787.8,
+   1331.6
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": -2.0,
+    "valid_ratio": -1.0,
+    "message": "the path could not be attached (status -2.0)"
+   }
+  ],
+  "attach_status": -2.0,
+  "valid_ratio": -1.0,
+  "time_s": 0.0,
+  "distance_mm": 0,
+  "message": "the path could not be attached (status -2.0)",
+  "retry_base_distance": 1100.0,
+  "retry": "arm base 1100 mm from the gun",
+  "uncovered_path_mm": 0
+ },
+ {
+  "id": 4,
+  "label": "rear_p1",
+  "curves": 3,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   1100.0,
+   0.0,
+   300.0
+  ],
+  "reachable_samples": "8/12",
+  "start_q": [
+   55.3,
+   -111.4,
+   -96.4,
+   206.2,
+   298.1,
+   172.0,
+   65.1,
+   1447.4,
+   1792.0
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 33.6,
+  "distance_mm": 5107,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "retry_base_distance": 1100.0,
+  "retry": "arm base 1100 mm from the gun",
+  "program": "Auto_04_rear_p1",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 4,
+  "label": "rear_p2",
+  "curves": 2,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   700.0,
+   0.0,
+   600.0
+  ],
+  "reachable_samples": "7/12",
+  "start_q": [
+   21.5,
+   -111.4,
+   -96.4,
+   197.0,
+   311.8,
+   149.4,
+   195.4,
+   3239.7,
+   1803.6
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 12.5,
+  "distance_mm": 2568,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "program": "Auto_04_rear_p2",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 5,
+  "label": "left_doors",
+  "curves": 6,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   1100.0,
+   0.0,
+   600.0
+  ],
+  "reachable_samples": "8/12",
+  "start_q": [
+   109.5,
+   -103.8,
+   -86.1,
+   184.7,
+   285.2,
+   181.3,
+   2667.1,
+   559.9,
+   1847.5
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 155.2,
+  "distance_mm": 23250,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "retry_base_distance": 1100.0,
+  "retry": "arm base 1100 mm from the gun",
+  "program": "Auto_05_left_doors",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 6,
+  "label": "right_doors",
+  "curves": 7,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   700.0,
+   0.0,
+   0.0
+  ],
+  "reachable_samples": "4/12",
+  "start_q": [
+   246.6,
+   -153.5,
+   -101.1,
+   78.6,
+   112.0,
+   185.0,
+   2657.3,
+   4350.7,
+   1752.9
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 162.0,
+  "distance_mm": 24936,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "retry_base_distance": null,
+  "retry": "the pose of an earlier good zone as the IK seed",
+  "program": "Auto_06_right_doors",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 7,
+  "label": "left_rail",
+  "curves": 14,
+  "status": "PARTIAL 4/5",
+  "pass": 1,
+  "offset_L_a_b": [
+   1100.0,
+   0.0,
+   300.0
+  ],
+  "reachable_samples": "11/12",
+  "start_q": [
+   118.4,
+   -112.3,
+   -123.5,
+   246.5,
+   285.6,
+   167.7,
+   5437.8,
+   679.0,
+   1356.5
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": -2.0,
+    "valid_ratio": -1.0,
+    "message": "the path could not be attached (status -2.0)"
+   }
+  ],
+  "attach_status": -2.0,
+  "valid_ratio": -1.0,
+  "time_s": 0.0,
+  "distance_mm": 0,
+  "message": "the path could not be attached (status -2.0)",
+  "retry_base_distance": 1100.0,
+  "retry": "arm base 1100 mm from the gun",
+  "uncovered_path_mm": 3008
+ },
+ {
+  "id": 7,
+  "label": "left_rail_p1",
+  "curves": 3,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   700.0,
+   0.0,
+   0.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   118.4,
+   -112.3,
+   -123.5,
+   246.5,
+   285.6,
+   167.7,
+   5316.3,
+   1001.1,
+   1719.1
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 33.7,
+  "distance_mm": 5291,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "program": "Auto_07_left_rail_p1",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 7,
+  "label": "left_rail_p2",
+  "curves": 3,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   400.0,
+   0.0,
+   900.0
+  ],
+  "reachable_samples": "8/12",
+  "start_q": [
+   115.9,
+   -95.3,
+   -123.5,
+   246.5,
+   288.7,
+   163.7,
+   4184.4,
+   1913.0,
+   295.6
+  ],
+  "retry_base_distance": 400.0,
+  "retry": "arm base 400 mm from the gun",
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 25.2,
+  "distance_mm": 4230,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "program": "Auto_07_left_rail_p2",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 7,
+  "label": "left_rail_p3",
+  "curves": 3,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   700.0,
+   0.0,
+   300.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   113.8,
+   -95.3,
+   -123.5,
+   250.1,
+   298.5,
+   344.1,
+   2290.6,
+   1151.7,
+   1107.7
+  ],
+  "retry_base_distance": null,
+  "retry": "the template pose as the IK seed",
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 24.7,
+  "distance_mm": 4137,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "program": "Auto_07_left_rail_p3",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 7,
+  "label": "left_rail_p4",
+  "curves": 3,
+  "status": "FAILED",
+  "pass": 1,
+  "offset_L_a_b": [
+   700.0,
+   -300.0,
+   0.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   113.8,
+   -92.8,
+   -123.5,
+   250.1,
+   290.8,
+   343.1,
+   2530.7,
+   1111.5,
+   1236.5
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 0.8767947086343185,
+    "message": "(87.7 %) Collision detected. <br><br>Program: <strong>Auto_07_left_rail_p4</strong><br>Instruction 82: <strong>MoveL 66</strong>"
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 0.8767947086343185,
+  "time_s": 29.1,
+  "distance_mm": 4801,
+  "message": "(87.7 %) Collision detected. <br><br>Program: <strong>Auto_07_left_rail_p4</strong><br>Instruction 82: <strong>MoveL 66</strong>",
+  "retry_base_distance": null,
+  "retry": "the template pose as the IK seed"
+ },
+ {
+  "id": 7,
+  "label": "left_rail_p5",
+  "curves": 2,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   900.0,
+   -300.0,
+   0.0
+  ],
+  "reachable_samples": "10/12",
+  "start_q": [
+   -109.2,
+   -72.1,
+   133.7,
+   113.7,
+   282.3,
+   0.4,
+   3963.5,
+   833.5,
+   1735.6
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 9.9,
+  "distance_mm": 1518,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "program": "Auto_07_left_rail_p5",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 8,
+  "label": "right_rail",
+  "curves": 15,
+  "status": "PARTIAL 4/5",
+  "pass": 1,
+  "offset_L_a_b": [
+   900.0,
+   0.0,
+   300.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   207.5,
+   -86.6,
+   -100.5,
+   212.5,
+   229.4,
+   210.4,
+   5847.7,
+   4222.5,
+   1255.9
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": -2.0,
+    "valid_ratio": -1.0,
+    "message": "the path could not be attached (status -2.0)"
+   }
+  ],
+  "attach_status": -2.0,
+  "valid_ratio": -1.0,
+  "time_s": 0.0,
+  "distance_mm": 0,
+  "message": "the path could not be attached (status -2.0)",
+  "retry_base_distance": null,
+  "retry": "the template pose as the IK seed",
+  "uncovered_path_mm": 3109
+ },
+ {
+  "id": 8,
+  "label": "right_rail_p1",
+  "curves": 3,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   700.0,
+   300.0,
+   0.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   -65.9,
+   -100.5,
+   -118.9,
+   244.7,
+   310.2,
+   176.2,
+   5469.0,
+   4230.1,
+   1532.6
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 31.4,
+  "distance_mm": 4952,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "retry_base_distance": null,
+  "retry": "the template pose as the IK seed",
+  "program": "Auto_08_right_rail_p1",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 8,
+  "label": "right_rail_p2",
+  "curves": 3,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   400.0,
+   -300.0,
+   600.0
+  ],
+  "reachable_samples": "7/12",
+  "start_q": [
+   -65.9,
+   -125.1,
+   -119.0,
+   244.7,
+   292.1,
+   183.6,
+   5007.0,
+   4067.8,
+   1253.8
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 14.3,
+  "distance_mm": 3032,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "retry_base_distance": 400.0,
+  "retry": "arm base 400 mm from the gun",
+  "program": "Auto_08_right_rail_p2",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 8,
+  "label": "right_rail_p3",
+  "curves": 3,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   900.0,
+   0.0,
+   0.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   -43.1,
+   -119.3,
+   -87.0,
+   244.7,
+   315.0,
+   337.2,
+   4151.8,
+   4260.5,
+   883.3
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 22.3,
+  "distance_mm": 3717,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "program": "Auto_08_right_rail_p3",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 8,
+  "label": "right_rail_p4",
+  "curves": 3,
+  "status": "OK",
+  "pass": 1,
+  "offset_L_a_b": [
+   900.0,
+   0.0,
+   0.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   -59.2,
+   -119.3,
+   -96.5,
+   244.7,
+   289.6,
+   169.3,
+   2282.7,
+   4213.8,
+   754.8
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": 1.0,
+    "valid_ratio": 1.0,
+    "message": "No problems found for this path<br>No collisions detected."
+   }
+  ],
+  "attach_status": 1.0,
+  "valid_ratio": 1.0,
+  "time_s": 25.6,
+  "distance_mm": 3992,
+  "message": "No problems found for this path<br>No collisions detected.",
+  "program": "Auto_08_right_rail_p4",
+  "tcp_to_path_mm": 150.0
+ },
+ {
+  "id": 8,
+  "label": "right_rail_p5",
+  "curves": 3,
+  "status": "FAILED",
+  "pass": 1,
+  "offset_L_a_b": [
+   900.0,
+   -300.0,
+   0.0
+  ],
+  "reachable_samples": "12/12",
+  "start_q": [
+   241.9,
+   -119.7,
+   -87.2,
+   241.8,
+   245.6,
+   199.5,
+   2527.9,
+   4384.8,
+   1137.4
+  ],
+  "attempts": [
+   {
+    "pass": 1,
+    "avoid_collisions": false,
+    "attach_status": -2.0,
+    "valid_ratio": -1.0,
+    "message": "the path could not be attached (status -2.0)"
+   }
+  ],
+  "attach_status": -2.0,
+  "valid_ratio": -1.0,
+  "time_s": 0.0,
+  "distance_mm": 0,
+  "message": "the path could not be attached (status -2.0)",
+  "retry_base_distance": null,
+  "retry": "the template pose as the IK seed"
+ }
+]
