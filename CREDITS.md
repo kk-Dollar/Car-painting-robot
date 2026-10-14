@@ -12,7 +12,7 @@ I ran, tested and verified all results myself.
 - Licence: **Creative Commons Attribution 4.0 International (CC BY 4.0)** —
   https://creativecommons.org/licenses/by/4.0/
 - Modifications by Krishna Pandit: extracted a paint-only shell from the full model and
-  scaled / re-oriented it to the brief's 4800 x 1900 x 1600 mm (front +X, left +Y, up +Z,
+  scaled / re-oriented it to the target 4800 x 1900 x 1600 mm (front +X, left +Y, up +Z,
   tyres on Z = 0). The shipped STLs
   (`car_xr_sedan_4800x1900x1600.stl`, `car_paint_only_4800x1900x1600.stl`) are these modified
   versions and remain under CC BY 4.0 with attribution to mk2design.
@@ -21,8 +21,8 @@ I ran, tested and verified all results myself.
 
 - **UR10** (6-axis arm), **Lucas RC3-1Y1R** (3-axis gantry) and the paint-gun tool are RoboDK
   library models. They are **not** redistributed in this repository; they are part of the
-  RoboDK installation and ship inside the RoboDK station (`Gantry Car Paint.rdk`) delivered via
-  Google Drive, under RoboDK's own terms.
+  RoboDK installation and ship inside the RoboDK station (`Gantry Car Paint.rdk`), which is
+  distributed separately, under RoboDK's own terms.
 
 ## Software
 

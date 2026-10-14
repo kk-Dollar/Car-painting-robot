@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""make_cell_layout.py - build the painting-cell building from the assessment's reference layout (12000 x 8000 mm) and put it into the RoboDK station.
+"""make_cell_layout.py - build the painting-cell building from a reference factory layout (12000 x 8000 mm) and put it into the RoboDK station.
 
-The reference plan (section 4 of the assessment PDF): a big hall with a central 8000 x 5000 mm painting bay, a 2000 mm entry zone on the left (car comes in from
+The reference plan: a big hall with a central 8000 x 5000 mm painting bay, a 2000 mm entry zone on the left (car comes in from
 the left) and a 2000 mm exit zone on the right, an opening in the left and right wall for the car, a row of three rooms (2500 mm deep) along the top with a door
-into the hall each, and columns along the walls. The PDF says the image is "only a general reference", so the bay is ENLARGED when the gantry does not fit.
+into the hall each, and columns along the walls. The reference image is only a general guide, so the bay is ENLARGED when the gantry does not fit.
 
 Everything is generated here (numpy only) as a few STL meshes:
     Layout_Floor      slab, its top 50 mm BELOW the floor level z = 0, so nothing touches it

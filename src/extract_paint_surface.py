@@ -9,7 +9,7 @@ A plain STL has no part information - see the notes at the bottom.
     python3 extract_paint_surface.py model.glb --out car --keep-mesh Body_Paint_Body_Paint_0
 
 Writes car_full.stl and car_paint_only.stl (mm, Z-up, long axis X, front +X, centred, tyres on Z = 0),
-both in the SAME frame, scaled to the brief's 4800 x 1900 x 1600 mm unless --uniform is given.
+both in the SAME frame, scaled to the target 4800 x 1900 x 1600 mm unless --uniform is given.
 
 Default guess for "painted skin": a mesh whose material name contains 'paint' and whose mesh name does not start
 with 'details' or 'wheel' (mirror caps, trim and wheel parts are left out). Always check the printed list.

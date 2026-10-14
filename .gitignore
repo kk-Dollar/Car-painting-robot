@@ -3,7 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 
-# RoboDK stations (large; delivered via Google Drive, not committed)
+# RoboDK stations (large; distributed separately, not committed)
 *.rdk
 *autosave*.rdk
 *backup*.rdk
@@ -26,5 +26,8 @@ src/cell_layout/
 .vscode/
 .claude/
 
-# The assessment brief itself (do NOT commit)
-Robotics_Simulation_Intern_Assessment.pdf
+# Reference PDFs (not committed)
+*.pdf
+
+# Local-only notes (not part of the public project)
+*.local.md

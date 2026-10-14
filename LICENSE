@@ -28,7 +28,7 @@ Car model - "Generic Toyama XR Sedan" by mk2design
     Licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
              https://creativecommons.org/licenses/by/4.0/
     Changes: a paint-only shell was extracted from the full model and the mesh
-             was scaled and re-oriented to the brief's 4800 x 1900 x 1600 mm.
+             was scaled and re-oriented to the target 4800 x 1900 x 1600 mm.
     The shipped STLs (car_xr_sedan_4800x1900x1600.stl, car_paint_only_4800x1900x1600.stl)
     are modified versions of this model and remain under CC BY 4.0 with
     attribution to mk2design.  See CREDITS.md.
@@ -36,5 +36,4 @@ Car model - "Generic Toyama XR Sedan" by mk2design
 RoboDK robot / tool library models (UR10, the Lucas RC3-1Y1R gantry, the
     paint-gun tool) are NOT included in this repository. They are part of the
     RoboDK installation / library and are redistributed under RoboDK's own
-    terms. The assembled RoboDK station (*.rdk) is delivered separately via
-    Google Drive.
+    terms. The assembled RoboDK station (*.rdk) is distributed separately.
