@@ -1,0 +1,119 @@
+{
+  "left_door": {
+    "station": "Left",
+    "spec": [
+      -350.0,
+      2350.0,
+      -90.0
+    ],
+    "cover": 83
+  },
+  "roof_left": {
+    "station": "LeftClose",
+    "spec": [
+      -300.0,
+      1900.0,
+      -90.0
+    ],
+    "cover": 100
+  },
+  "roof_right": {
+    "station": "RightClose",
+    "spec": [
+      -300.0,
+      -1900.0,
+      90.0
+    ],
+    "cover": 82
+  },
+  "right_door": {
+    "station": "Right",
+    "spec": [
+      -350.0,
+      -2350.0,
+      90.0
+    ],
+    "cover": 100
+  },
+  "hood_left": {
+    "station": "LeftFwd",
+    "spec": [
+      1500.0,
+      2350.0,
+      -90.0
+    ],
+    "cover": 100
+  },
+  "hood_right": {
+    "station": "RightFwd",
+    "spec": [
+      1500.0,
+      -2350.0,
+      90.0
+    ],
+    "cover": 100
+  },
+  "trunk": {
+    "station": "Rear",
+    "spec": [
+      -3800.0,
+      0.0,
+      0.0
+    ],
+    "cover": 100
+  },
+  "front_face": {
+    "station": "Front",
+    "spec": [
+      3800.0,
+      0.0,
+      180.0
+    ],
+    "cover": 87
+  },
+  "rear_face": {
+    "station": "Rear",
+    "spec": [
+      -3800.0,
+      0.0,
+      0.0
+    ],
+    "cover": 100
+  },
+  "left_fender": {
+    "station": "LeftFwd",
+    "spec": [
+      1500.0,
+      2350.0,
+      -90.0
+    ],
+    "cover": 33
+  },
+  "right_fender": {
+    "station": "RightFwd",
+    "spec": [
+      1500.0,
+      -2350.0,
+      90.0
+    ],
+    "cover": 71
+  },
+  "left_rear": {
+    "station": "LeftAft",
+    "spec": [
+      -1400.0,
+      2350.0,
+      -90.0
+    ],
+    "cover": 52
+  },
+  "right_rear": {
+    "station": "RightAft",
+    "spec": [
+      -1400.0,
+      -2350.0,
+      90.0
+    ],
+    "cover": 100
+  }
+}
