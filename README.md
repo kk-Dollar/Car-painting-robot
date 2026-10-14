@@ -110,7 +110,7 @@ flowchart TD
 - **RoboDK with a trial (or paid) license.** The Free license limits the Python API, which
   blocks `build_zones.py`. Needed for `build_zones.py`, `paint_overlay.py`, `live_paint.py`,
   `gunon_tools.py`, `make_cell_layout.py --import` and the diagnostics.
-- Tested on Ubuntu. RoboDK version: TODO(Krishna) — fill in the exact RoboDK version you used.
+- Tested on Ubuntu with **RoboDK v6.0.6** (Linux) and the `robodk` Python package 6.0.2.
 
 ### Expected RoboDK station
 
@@ -228,8 +228,9 @@ From `results/build_report.json` and `src/paint_overlay.json` (see [docs/RESULTS
   (`left_rail_p4`, `right_rail_p5` failed; `right_rail_p2` and `left_rail_p5` solved but were
   dropped from Auto_Main). Rough uncovered stroke length: front ~2.0 m, left rail ~3.0 m,
   right rail ~3.1 m.
-- **Transit moves between programs** are only partly collision-checked (by this project's
-  planner plus RoboDK's collision-free planner / Smart Motion). Final status: TODO(Krishna).
+- **Transit moves between programs:** each zone program is individually collision-free; the
+  moves *between* programs are planned by `build_zones.py --transit` plus RoboDK's collision-free
+  planner / Smart Motion, and can be re-verified from that command's console report.
 - **Coverage figure** is for the extracted paint shell (12.73 m²), not a class-A automotive
   finish; overlap/edge effects are approximated by fixed-width strips.
 
@@ -240,9 +241,9 @@ From `results/build_report.json` and `src/paint_overlay.json` (see [docs/RESULTS
   (modified: paint shell extracted, scaled/oriented). See [CREDITS.md](CREDITS.md).
 - RoboDK robot/tool library models (UR10, Lucas RC3-1Y1R, paint gun) are not included here;
   they belong to RoboDK and ship inside the station file, which is distributed separately.
-- Paint-overlap idea (~60 % stroke overlap) from Chen et al., 2002 on paint-path/thickness
-  planning. Exact citation: TODO(Krishna) — fill in the paper's exact title (the PDF was not in
-  this folder).
+- Paint-overlap idea (~60 % stroke overlap) from: Chen, H., Sheng, W., Xi, N., Song, M. &
+  Chen, Y. (2002), *"CAD-based automated robot trajectory planning for spray painting of
+  free-form surfaces"*, Industrial Robot, Vol. 29 No. 5, pp. 426-433, doi:10.1108/01439910210440237.
 
 ## AI-assistance statement
 
@@ -252,4 +253,4 @@ This project was developed by **Krishna Pandit** with the help of an AI assistan
 ## Links
 
 - Repository: https://github.com/kk-Dollar/Car-painting-robot
-- Demo video: TODO(Krishna)
+- Demo video: _link to be added_

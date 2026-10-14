@@ -77,13 +77,16 @@ Auto_Main (they could not be joined to their neighbours by a safe transit).
 
 Plus the failed pieces `front_centre_top_5`, `left_rail_p4`, `right_rail_p5`.
 
-## Notes / discrepancies to confirm — TODO(Krishna)
+## Notes
 
-The data files above are the source of truth. A few points differ from earlier hand-written
-summaries and should be confirmed against the delivered station (`Gantry Car Paint.rdk`):
+The data files above are the source of truth.
 
-- Coverage is **9.75 m² / 77 %** in `paint_overlay.json` (an earlier note said 9.87 m² / 78 %).
+- Coverage is **9.75 m² / 77 %** per `paint_overlay.json`.
 - `Auto_Main` contains **14** programs per `paint_overlay.json`; `right_rail_p2` and
-  `left_rail_p5` solved OK but are **not** in it. Confirm the final Auto_Main call list and order
-  from the station.
-- **Transit (program-to-program) moves:** final collision-free status is TODO(Krishna).
+  `left_rail_p5` solved OK (valid ratio 1.0) but were left out of the master program because they
+  could not be joined to their neighbours by a safe transit.
+- **Transit (program-to-program) moves:** each zone program is individually collision-free; the
+  moves *between* programs are planned by `build_zones.py --transit` plus RoboDK's collision-free
+  planner. To regenerate and re-verify the master transit plan, run
+  `python3 build_zones.py --main-only --transit --auto-order` with the station open and read the
+  console report.

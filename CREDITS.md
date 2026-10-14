@@ -31,7 +31,12 @@ I ran, tested and verified all results myself.
 
 ## Reference
 
-- Paint-overlap idea (~60 % stroke overlap for a 120-140 mm fan) adapted from
-  **Chen et al., 2002** on robotic paint-path and paint-thickness planning.
-  Exact title and venue: **TODO(Krishna)** — fill in the full citation (the paper PDF was not in
-  the project folder, so it could not be read for the exact title).
+- Paint-overlap idea (~60 % stroke overlap for a 120-140 mm fan) adapted from robotic
+  paint-path / paint-thickness planning work by Chen et al.:
+  Chen, H., Sheng, W., Xi, N., Song, M. & Chen, Y. (2002),
+  *"CAD-based automated robot trajectory planning for spray painting of free-form surfaces"*,
+  **Industrial Robot: An International Journal**, Vol. 29 No. 5, pp. 426-433,
+  doi:10.1108/01439910210440237.
+  (The same authors published a closely related ICRA 2002 paper, *"Automated robot trajectory
+  planning for spray painting of free-form surfaces in automotive manufacturing"* — confirm which
+  one you consulted.)
