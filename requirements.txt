@@ -1,0 +1,15 @@
+# Python 3.10 was used.  Install with:  pip install -r requirements.txt
+#
+# Core (all pipeline/build/overlay scripts):
+numpy                 # tested with 1.21.5
+robodk                # RoboDK Python API (robolink, robomath). A running RoboDK instance is needed for build_zones.py,
+                      # paint_overlay.py, live_paint.py, gunon_tools.py, make_cell_layout.py --import and the diagnostics.
+matplotlib            # only for the preview/plan PNGs (segment_car_patches, make_zone_curves, group_zones, make_cell_layout)
+
+# Mesh import for the FIRST two pipeline steps only:
+trimesh               # extract_paint_surface.py (reads the source GLB/glTF) and segment_car_patches.py.
+                      # paint_common.load_mesh() reads the shipped BINARY STLs with numpy alone, so steps 2-6 do NOT need trimesh.
+                      # NOTE: current trimesh needs a newer numpy than 1.21.5; pin a compatible pair, e.g. numpy>=1.24 with a recent trimesh.
+
+# Optional:
+# PySide2             # only if you run the RoboDK API against a GUI build that needs the Qt bindings; not required for the scripts here.
