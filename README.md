@@ -45,7 +45,7 @@ flowchart TD
     STL -->|segment_car_patches.py| ZONES["car_zones.json<br/>(20 patches, + cad_patches_30deg.png)"]
     ZONES -->|make_zone_curves.py| CURVES["zone_curves.json<br/>(zig-zag spray curves)"]
     CURVES -->|group_zones.py| GROUPED["zone_curves_grouped.json<br/>(9 zones)"]
-    GROUPED -->|build_zones.py  (RoboDK running)| PROGS["Auto_XX_&lt;zone&gt; + Auto_Main<br/>build_report.json"]
+    GROUPED -->|build_zones.py, RoboDK running| PROGS["Auto_XX_&lt;zone&gt; + Auto_Main<br/>build_report.json"]
     PROGS -->|paint_overlay.py / live_paint.py| OVERLAY["red coverage strips<br/>paint_overlay.json (coverage %)"]
     STL -.->|make_cell_layout.py| CELL["Cell Layout (hall, bay, rooms)<br/>layout_plan.png"]
 ```
@@ -244,11 +244,6 @@ From `results/build_report.json` and `src/paint_overlay.json` (see [docs/RESULTS
 - Paint-overlap idea (~60 % stroke overlap) from: Chen, H., Sheng, W., Xi, N., Song, M. &
   Chen, Y. (2002), *"CAD-based automated robot trajectory planning for spray painting of
   free-form surfaces"*, Industrial Robot, Vol. 29 No. 5, pp. 426-433, doi:10.1108/01439910210440237.
-
-## AI-assistance statement
-
-This project was developed by **Krishna Pandit** with the help of an AI assistant
-(**Claude by Anthropic**). I ran, tested and verified all results myself.
 
 ## Links
 

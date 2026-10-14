@@ -2,9 +2,6 @@
 
 **Author / copyright holder:** Krishna Pandit.
 
-Developed by Krishna Pandit with the help of an AI assistant (**Claude by Anthropic**).
-I ran, tested and verified all results myself.
-
 ## Car model
 
 - **"Generic Toyama XR Sedan"** by **mk2design**
