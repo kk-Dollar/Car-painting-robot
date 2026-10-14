@@ -50,6 +50,6 @@ College:             Birla Institute of Technology Mesra, Ranchi
 Email:               kk7xofficial@gmail.com
 Simulation Software: RoboDK (Python API)
 Robot Selected:      UR10 on a Lucas RC3-1Y1R 3-axis gantry (9 synchronised joints)
-GitHub Link:         https://github.com/kk-Dollar/Car-painting-robot   TODO(Krishna): confirm repo URL after pushing
+GitHub Link:         https://github.com/kk-Dollar/Car-painting-robot
 Google Drive Link:   TODO(Krishna)   (Anyone with the link -> Viewer)
 ```
