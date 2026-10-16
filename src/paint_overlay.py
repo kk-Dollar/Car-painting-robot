@@ -13,6 +13,7 @@ works from the real robot poses instead:
 
   python3 paint_overlay.py build [--width 120] [--lift 3] [--step 4] [--subdivide 1] [--seg 250]   create the overlay objects from Auto_Main (about 2-4 minutes)
   python3 paint_overlay.py focus main | Auto_00_hood                     which strokes the next run reveals: the whole Auto_Main, or one program (for tests)
+  python3 paint_overlay.py resequence                                    re-read the order of the programs in Auto_Main (do this after changing it; live_paint.py does it by itself)
   python3 paint_overlay.py clear                                         delete the overlay objects
 
 Then:  python3 gunon_tools.py mode overlay   and play Auto_Main (or one program after `focus`).
@@ -239,6 +240,42 @@ def build(RDK, a):
         print(f"({n_missed} sampled targets had no shell surface within 600 mm in front of the gun and were left out.)")
 
 
+def resequence(RDK, verbose=True):
+    """Re-read the order of the programs in Auto_Main and rebuild the stroke sequence from the strokes already computed by `build` (no objects are
+    created, takes a second). Link programs between the zones (Smart Motion etc.) have no strokes and are simply skipped."""
+    path = os.path.join(HERE, "paint_overlay.json")
+    try:
+        meta = json.load(open(path))
+    except Exception:
+        raise SystemExit("paint_overlay.json not found: run `python3 paint_overlay.py build` first.")
+    built = meta["programs"]
+    order, strokes, notes = [], [], []
+    for pn in called_programs(RDK):
+        if pn in built:
+            strokes += built[pn]
+            order.append((pn, len(built[pn])))
+        else:
+            prog = RDK.Item(pn, robolink.ITEM_TYPE_PROGRAM)
+            if strokes_of(prog):
+                notes.append(f"'{pn}' paints but has no overlay pieces: run `python3 paint_overlay.py build` again")
+    for pn in built:
+        if pn not in [o[0] for o in order]:
+            notes.append(f"'{pn}' is built but not called by Auto_Main any more (its paint will not appear)")
+    seq = ",".join("|".join(sg["name"] for sg in r["segments"]) for r in strokes)
+    RDK.setParam("PaintSeq_main", seq)
+    RDK.setParam("PaintSeq", seq)
+    meta["strokes"] = strokes
+    with open(path, "w") as f:
+        json.dump(meta, f, indent=1)
+    if verbose:
+        print(f"Auto_Main order now ({sum(n for _, n in order)} strokes):")
+        for pn, n in order:
+            print(f"   {pn}: {n} strokes")
+        for note in notes:
+            print("  NOTE:", note)
+    return meta
+
+
 def focus(RDK, which):
     key = "PaintSeq_main" if which == "main" else "PaintSeq_" + which
     seq = [s for s in str(RDK.getParam(key) or "").split(",") if s]
@@ -269,7 +306,7 @@ def clear(RDK):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["build", "focus", "clear"])
+    ap.add_argument("cmd", choices=["build", "focus", "clear", "resequence"])
     ap.add_argument("which", nargs="?", default="main")
     ap.add_argument("--width", type=float, default=120.0, help="painted strip width in mm")
     ap.add_argument("--lift", type=float, default=3.0, help="how far the red surface sits above the shell, mm")
@@ -278,7 +315,7 @@ def main():
     ap.add_argument("--subdivide", type=int, default=1, help="split the shell triangles in 4 this many times before picking the strip (0 = off; 1 = smoother edges)")
     a = ap.parse_args()
     RDK = robolink.Robolink()
-    {"build": lambda: build(RDK, a), "focus": lambda: focus(RDK, a.which), "clear": lambda: clear(RDK)}[a.cmd]()
+    {"build": lambda: build(RDK, a), "focus": lambda: focus(RDK, a.which), "clear": lambda: clear(RDK), "resequence": lambda: resequence(RDK)}[a.cmd]()
 
 
 if __name__ == "__main__":

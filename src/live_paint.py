@@ -13,6 +13,7 @@ starts again (GunOn(-1)) everything is hidden again. A piece is only shown AFTER
 one piece, ~250 mm) and never appears ahead of it.
 
 Prepare once:   python3 paint_overlay.py build        python3 gunon_tools.py mode live
+When it starts it re-reads the order of the programs in Auto_Main, so reordering Auto_Main (or adding link programs between the zones) needs no rebuild.
 Stop with Ctrl+C. Needs paint_overlay.json and car_paint_only_4800x1900x1600.stl next to this script.
 """
 import argparse
@@ -108,12 +109,16 @@ def main():
     ap.add_argument("--focus", default="main", help="main, or the name of one program")
     ap.add_argument("--poll", type=float, default=0.08, help="seconds between polls")
     ap.add_argument("--no-hide", action="store_true", help="do not hide all paint at the start")
+    ap.add_argument("--no-resequence", action="store_true", help="do not re-read the order of the programs in Auto_Main (use the order stored by the last build)")
     a = ap.parse_args()
-    meta = json.load(open(os.path.join(HERE, "paint_overlay.json")))
+    RDK = robolink.Robolink()
+    if a.focus == "main" and not a.no_resequence:
+        meta = po.resequence(RDK)                       # Auto_Main may have been reordered since `build`: follow its CURRENT order
+    else:
+        meta = json.load(open(os.path.join(HERE, "paint_overlay.json")))
     strokes = meta["strokes"] if a.focus == "main" else meta["programs"].get(a.focus)
     if not strokes:
         raise SystemExit(f"No strokes for '{a.focus}' in paint_overlay.json. Run `python3 paint_overlay.py build` first.")
-    RDK = robolink.Robolink()
     tool = RDK.Item("Paint gun", robolink.ITEM_TYPE_TOOL)
     carf = RDK.Item("Car Frame", robolink.ITEM_TYPE_FRAME)
     shell = next((it for it in RDK.ItemList(robolink.ITEM_TYPE_OBJECT) if "car_paint_only" in it.Name().lower()), None)
