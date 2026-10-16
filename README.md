@@ -258,7 +258,3 @@ The computed spray pattern itself (before it goes to the robot):
   Chen, Y. (2002), *"CAD-based automated robot trajectory planning for spray painting of
   free-form surfaces"*, Industrial Robot, Vol. 29 No. 5, pp. 426-433, doi:10.1108/01439910210440237.
 
-## Links
-
-- Repository: https://github.com/kk-Dollar/Car-painting-robot
-- Demo video: _link to be added_
