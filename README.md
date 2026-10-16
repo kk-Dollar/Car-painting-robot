@@ -9,9 +9,9 @@ A simulated robotic paint cell for a full-size car body. A **UR10** arm riding a
 paint gun and sprays the exterior surfaces of a ~4800 x 1900 x 1600 mm sedan, with collision
 checking on every path.
 
-![Spray strokes on the car shell](docs/images/zone_curves_grouped_preview.png)
+![The painting cell in RoboDK](docs/screenshots/01_cell_overview.png)
 
-*Computed zig-zag spray strokes (green) on the paint-only shell, grouped into 9 body zones.*
+*The cell in RoboDK: the UR10 on its Lucas RC3-1Y1R gantry, the car loaded with its spray curves, inside the hall.*
 
 > **Honesty note.** The paint is shown as a **computed coverage overlay** (thin red strips
 > ray-cast from the gun onto the shell), not a physical particle-spray simulation — RoboDK's
@@ -218,6 +218,19 @@ From `results/build_report.json` and `src/paint_overlay.json` (see [docs/RESULTS
 - **Computed coverage: 9.75 m² of 12.73 m² of the shell = 77 %** (120 mm strips), per
   `paint_overlay.json`.
 - Total solved spray-path length ≈ **150 m**.
+
+## Gallery
+
+| | |
+|:--:|:--:|
+| ![Paths and coverage](docs/screenshots/03_paths_and_coverage.png) | ![Arm painting the car](docs/screenshots/02_arm_painting.png) |
+| Spray curves (green) and finished strokes (red), with the `Auto_Main` call list. | The UR10 working the left side mid-run; finished strokes turn red. |
+| ![Near-complete coverage](docs/screenshots/04_coverage_spraying.png) | ![Cell coverage, top view](docs/screenshots/05_cell_coverage_top.png) |
+| Near the end of `Auto_Main` — the gun finishing the front (spray cone visible). | Elevated view of the cell with most of the body covered. |
+
+The computed spray pattern itself (before it goes to the robot):
+
+![Computed spray strokes](docs/images/zone_curves_grouped_preview.png)
 
 ## Known limitations
 
